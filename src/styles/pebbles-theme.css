@@ -1,0 +1,201 @@
+/* Pebbles Theme - Calm, Natural, Trustworthy */
+
+:root {
+  /* Pebbles Color Palette */
+  --pebbles-stone-50: #f8f9fa;
+  --pebbles-stone-100: #f1f3f4;
+  --pebbles-stone-200: #e8eaed;
+  --pebbles-stone-300: #dadce0;
+  --pebbles-stone-400: #bdc1c6;
+  --pebbles-stone-500: #9aa0a6;
+  --pebbles-stone-600: #80868b;
+  --pebbles-stone-700: #5f6368;
+  --pebbles-stone-800: #3c4043;
+  --pebbles-stone-900: #202124;
+
+  /* Earthy Green Accents */
+  --pebbles-green-50: #f0f9f4;
+  --pebbles-green-100: #dcf4e6;
+  --pebbles-green-200: #bbe8d0;
+  --pebbles-green-300: #8dd5b3;
+  --pebbles-green-400: #5bb98c;
+  --pebbles-green-500: #34a853;
+  --pebbles-green-600: #2d8f47;
+  --pebbles-green-700: #28753c;
+  --pebbles-green-800: #245d32;
+  --pebbles-green-900: #1e4a2a;
+
+  /* Soft Blue Accents */
+  --pebbles-blue-50: #f0f7ff;
+  --pebbles-blue-100: #e1efff;
+  --pebbles-blue-200: #c3dfff;
+  --pebbles-blue-300: #94c5ff;
+  --pebbles-blue-400: #5ea3ff;
+  --pebbles-blue-500: #2563eb;
+  --pebbles-blue-600: #1d4ed8;
+  --pebbles-blue-700: #1e40af;
+  --pebbles-blue-800: #1e3a8a;
+  --pebbles-blue-900: #1e3a8a;
+
+  /* Semantic Colors */
+  --pebbles-primary: var(--pebbles-stone-700);
+  --pebbles-secondary: var(--pebbles-green-500);
+  --pebbles-accent: var(--pebbles-blue-500);
+  --pebbles-background: var(--pebbles-stone-50);
+  --pebbles-surface: #ffffff;
+  --pebbles-text-primary: var(--pebbles-stone-800);
+  --pebbles-text-secondary: var(--pebbles-stone-600);
+  --pebbles-text-muted: var(--pebbles-stone-500);
+}
+
+/* Typography - Friendly Sans-Serif with Rounded Edges */
+.pebbles-font-primary {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+.pebbles-font-rounded {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  letter-spacing: -0.01em;
+}
+
+/* Pebble-shaped Elements */
+.pebbles-button {
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.pebbles-button-primary {
+  background: linear-gradient(135deg, var(--pebbles-green-500), var(--pebbles-green-600));
+  color: white;
+  box-shadow: 0 2px 8px rgba(52, 168, 83, 0.2);
+}
+
+.pebbles-button-primary:hover {
+  background: linear-gradient(135deg, var(--pebbles-green-600), var(--pebbles-green-700));
+  box-shadow: 0 4px 12px rgba(52, 168, 83, 0.3);
+  transform: translateY(-1px);
+}
+
+.pebbles-button-secondary {
+  background: var(--pebbles-stone-100);
+  color: var(--pebbles-text-primary);
+  border: 1px solid var(--pebbles-stone-300);
+}
+
+.pebbles-button-secondary:hover {
+  background: var(--pebbles-stone-200);
+  border-color: var(--pebbles-stone-400);
+}
+
+/* Soft Gradient Backgrounds */
+.pebbles-gradient-hero {
+  background: linear-gradient(135deg, 
+    var(--pebbles-stone-50) 0%, 
+    var(--pebbles-green-50) 50%, 
+    var(--pebbles-blue-50) 100%);
+}
+
+.pebbles-gradient-section {
+  background: linear-gradient(180deg, 
+    var(--pebbles-stone-50) 0%, 
+    var(--pebbles-surface) 100%);
+}
+
+.pebbles-gradient-water {
+  background: linear-gradient(135deg, 
+    var(--pebbles-blue-50) 0%, 
+    var(--pebbles-green-50) 50%, 
+    var(--pebbles-stone-50) 100%);
+}
+
+/* Card Styles with Natural Curves */
+.pebbles-card {
+  background: var(--pebbles-surface);
+  border-radius: 20px;
+  border: 1px solid var(--pebbles-stone-200);
+  box-shadow: 0 2px 12px rgba(95, 99, 104, 0.08);
+  transition: all 0.2s ease;
+}
+
+.pebbles-card:hover {
+  box-shadow: 0 4px 20px rgba(95, 99, 104, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Gentle Animations */
+.pebbles-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.pebbles-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(52, 168, 83, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.pebbles-ripple:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Text Styles */
+.pebbles-heading {
+  color: var(--pebbles-text-primary);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.pebbles-subheading {
+  color: var(--pebbles-text-secondary);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.pebbles-body {
+  color: var(--pebbles-text-secondary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.pebbles-muted {
+  color: var(--pebbles-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Smooth Transitions */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Focus States */
+.pebbles-focus:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 168, 83, 0.2);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .pebbles-heading {
+    font-size: 1.5rem;
+  }
+  
+  .pebbles-subheading {
+    font-size: 1rem;
+  }
+}
+
